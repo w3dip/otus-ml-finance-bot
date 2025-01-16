@@ -21,3 +21,4 @@ data/*.json
 
 tmp
 catboost_info
+tsmixer_checkpoints
