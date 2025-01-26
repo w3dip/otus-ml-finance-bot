@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pylab as plt
-from binance import Client 
+#from binance import Client
 from sklearn.utils import all_estimators
 from sklearn import base
 import sklearn.metrics as metrics 
@@ -47,16 +47,16 @@ This function will load the timeseries data from the Binance API and return it a
  Note: We load only the "close" price.
  """
 
-def load_data(ticker,freq,lookback):
-    client=Client()
-    frame=pd.DataFrame(client.get_historical_klines(ticker,freq.lower(),f'{lookback} ago UTC'))
-    frame=frame[[0,4]]
-    frame.columns=['Timestamp','close']
-    frame=frame.astype(float)
-    frame['Time']=pd.to_datetime(frame['Timestamp'],unit='ms')
-    frame=frame.set_index('Time')
-    frame.drop('Timestamp',inplace=True,axis=1)
-    return frame
+# def load_data(ticker,freq,lookback):
+#     client=Client()
+#     frame=pd.DataFrame(client.get_historical_klines(ticker,freq.lower(),f'{lookback} ago UTC'))
+#     frame=frame[[0,4]]
+#     frame.columns=['Timestamp','close']
+#     frame=frame.astype(float)
+#     frame['Time']=pd.to_datetime(frame['Timestamp'],unit='ms')
+#     frame=frame.set_index('Time')
+#     frame.drop('Timestamp',inplace=True,axis=1)
+#     return frame
 
 
 """
