@@ -17,7 +17,6 @@ HistGradientBoostingRegressor
 HuberRegressor
 IsotonicRegression
 KNeighborsRegressor
-KernelRidge
 Lars
 LarsCV
 Lasso
