@@ -14,10 +14,10 @@ def enrich_with_ta(_data, _params):
     """
     _df = _data.copy()
     # Извлекаем параметры из словаря
-    RSI_period = _params['RSI_period'] * COMMON_CONFIG.TA_KOEF
-    fastMACD_period = _params['fastMACD_period'] * COMMON_CONFIG.TA_KOEF
-    slowMACD_period = _params['slowMACD_period'] * COMMON_CONFIG.TA_KOEF
-    signalMACD_period = _params['signalMACD_period'] * COMMON_CONFIG.TA_KOEF
+    RSI_period = _params['RSI_period']
+    fastMACD_period = _params['fastMACD_period']
+    slowMACD_period = _params['slowMACD_period']
+    signalMACD_period = _params['signalMACD_period']
 
     # Добавляем индикаторы
     _close = _df['close']
